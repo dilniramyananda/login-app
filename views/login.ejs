@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Internal Employee Portal</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+    
+<body>
+
+<div class="form-container">
+    <h1>Welcome to the Internal Employee Portal</h1>
+
+    <p>
+        This portal is designed exclusively for company employees.
+        Please sign in using your official company email address and
+        password to access your personal profile and internal tools.
+    </p>
+    <% if (error) { %>
+    <div style="color: red; background: #fee; border: 1px solid red; padding: 10px; margin-bottom: 10px; border-radius: 5px; text-align: center;">
+        <%= error %>
+    </div>
+    <% } %>
+   <form id="loginForm" action="/login" method="POST">
+    <div class="form-group">
+        <label for="email">Company Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="name@company.com" autofocus><br>
+        <small>Enter the email address provided by the company</small>
+    </div>
+     <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password securely"><br>
+        <small>Make sure your password is kept confidential</small>
+    </div>
+
+    <button type="submit" class="submit-btn">Log In</button>
+</form>
+<p>Don't have an account? <a href="/Signup">Signup</a> </a></p>
+
+    <p id="errorMessage"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

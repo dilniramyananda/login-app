@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+    
+<body>
+
+<div class="form-container">
+    <h1>Signup</h1>
+
+    
+
+   <form id="SignUpForm" action="/signup" method="POST">
+    <div class="form-group">
+        <label for="email">Company Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="name@company.com" autofocus><br>
+        <small>Enter the email address provided by the company</small>
+    </div>
+     <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password securely"><br>
+        <small>Make sure your password is kept confidential</small>
+    </div>
+
+    <button type="submit" class="submit-btn">Signup</button>
+</form>
+
+
+    <p id="errorMessage"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

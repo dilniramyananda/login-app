@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-card {
+            background: white;
+            width: 350px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            color: #9b59b6;
+            font-size: 50px;
+        }
+        h2 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 24px;
+        }
+        .email-text {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .role-badge {
+            display: inline-block;
+            background: #9b59b6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .logout-link {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: 600;
+            border: 2px solid #e74c3c;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .logout-link:hover {
+            background: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="icon-container">
+            <i class="fas fa-user"></i>
+        </div>
+
+        <h2><%= user.name ? user.name : "Welcome User" %></h2>
+        
+        <p class="email-text"><%= user.email %></p>
+
+        <div class="role-badge">
+            <%= user.role ? user.role : "General Member" %>
+        </div>
+
+        <br><br>
+        <a href="/login" class="logout-link">Logout</a>
+    </div>
+
+</body>
+</html>
